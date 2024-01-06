@@ -2,11 +2,8 @@ use master;
 go
 drop database if exists edunovawp3;
 go
--- ovo je komentar
 create database edunovawp3 collate Croatian_CI_AS;
 go
---drop database edunovawp3;
---use master
 use edunovawp3;
 
 create table smjerovi(
@@ -18,14 +15,12 @@ vaucer bit
 );
 
 create table grupe(
-
-	sifra			int			not null primary key identity(1,1),
-	naziv			varchar(5)	not null,
-	smjer			int			not null,
-	datumpocetka	datetime,
-	maxpolaznika	int			not null,
-	predavac		int
-
+sifra int not null primary key identity(1,1),
+naziv varchar(5) not null,
+smjer int not null,
+datumpocetka datetime,
+maxpolaznika int not null,
+predavac int
 );
 
 
@@ -47,16 +42,15 @@ oib char(11),
 iban varchar(50)
 );
 
--- ako nešto pogriješim onda mogu obrisati tablicu pa ponovo kreirati
---drop table predavaci;
 
+--drop table predavaci;
 
 create table clanovi(
 grupa int not null,
 polaznik int not null
 );
 
--- kreiranje vanjskih kljuÄŤeva
+
 alter table grupe add foreign key (smjer) references smjerovi(sifra);
 alter table grupe add foreign key (predavac) references predavaci(sifra);
 
@@ -82,14 +76,11 @@ insert into smjerovi (naziv) values ('čšćđž ČŠĆĐŽ');
 
 
 
-
-
 insert into predavaci (ime, prezime, email) values
 -- 1
 ('Tomislav','Jakopec','tjakopec@gmail.com'),
 -- 2
 ('Shaquille','O''Neal','shaki@gmail.com');
-
 
 
 
@@ -123,15 +114,12 @@ insert into polaznici(ime,prezime,email) values
 
 
 
-
-
 insert into grupe (naziv,predavac,datumpocetka,smjer,maxpolaznika)
 values
 -- 1
 ('WP3',1,'2023-11-29 19:00:00',1,25),
 -- 2
 ('WP2',null,'2023-11-07 17:00:00',1,25);
-
 
 
 
