@@ -9,20 +9,19 @@ use edunovawp3;
 create table smjerovi(
 sifra int not null primary key identity(1,1),
 naziv varchar(50) not null,
-trajanje int null, --null se ne piše. Ako ne piše not null onda se podrazumjeva null
-cijena decimal(18,2), -- iako ništa ne piše je null
+trajanje int,
+cijena decimal(18,2),
 vaucer bit
 );
 
 create table grupe(
 sifra int not null primary key identity(1,1),
-naziv varchar(5) not null,
+naziv varchar(50) not null,
 smjer int not null,
 datumpocetka datetime,
 maxpolaznika int not null,
 predavac int
 );
-
 
 create table polaznici(
 sifra int not null primary key identity(1,1),
@@ -35,20 +34,18 @@ brojugovora varchar(10)
 
 create table predavaci(
 sifra int not null primary key identity(1,1),
-ime varchar(50) not null,
-prezime varchar(50) not null,
-email varchar(100) not null,
+ime varchar(50),
+prezime varchar(50),
+email varchar(100),
 oib char(11),
 iban varchar(50)
 );
-
-
---drop table predavaci;
 
 create table clanovi(
 grupa int not null,
 polaznik int not null
 );
+
 
 
 alter table grupe add foreign key (smjer) references smjerovi(sifra);
@@ -57,36 +54,22 @@ alter table grupe add foreign key (predavac) references predavaci(sifra);
 alter table clanovi add foreign key (grupa) references grupe(sifra);
 alter table clanovi add foreign key (polaznik) references polaznici(sifra);
 
+--1
+insert into smjerovi (naziv,trajanje,cijena,vaucer) values
+('Web programiranje',225,1500.50,1);
 
 
 
--- školska sintaksa
--- 1
-insert into smjerovi (naziv, trajanje,cijena,vaucer)
-values ('Web programiranje', 225, 1859.45,1);
-
--- loša sintaksa
--- 2
-insert into smjerovi values
-('Web dizajn',null,null,null);
-
--- minimalna dobra sintaksa
--- 3
-insert into smjerovi (naziv) values ('čšćđž ČŠĆĐŽ');
-
-
-
-insert into predavaci (ime, prezime, email) values
--- 1
+insert into predavaci (ime,prezime,email) values
+--1
 ('Tomislav','Jakopec','tjakopec@gmail.com'),
--- 2
+--2
 ('Shaquille','O''Neal','shaki@gmail.com');
 
 
 
-
--- 1 do 24
-insert into polaznici(ime,prezime,email) values
+--1 do 24
+insert into polaznici (ime,prezime,email) values
 ('Slaven','Poznić','slaven.poznic@hotmail.com'),
 ('Karla','Kraljik','kraljikkarla@gmail.com'),
 ('Dino','Sabljić','dino.sabljic@gmail.com'),
@@ -113,14 +96,11 @@ insert into polaznici(ime,prezime,email) values
 ('Veljko','Vujić','veljko2805vujic@gmail.com');
 
 
-
-insert into grupe (naziv,predavac,datumpocetka,smjer,maxpolaznika)
-values
+insert into grupe (naziv,predavac,datumpocetka,smjer,maxpolaznika) values
 -- 1
 ('WP3',1,'2023-11-29 19:00:00',1,25),
 -- 2
 ('WP2',null,'2023-11-07 17:00:00',1,25);
-
 
 
 insert into clanovi (grupa,polaznik) values
@@ -128,10 +108,4 @@ insert into clanovi (grupa,polaznik) values
 ,(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),(1,15),(1,16)
 ,(1,17),(1,18),(1,19),(1,20),(1,21),(1,22),(1,23),(1,24);
 
-
-
-
-
-
-
-
+--zagter
