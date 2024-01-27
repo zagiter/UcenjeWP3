@@ -1,8 +1,3 @@
 ﻿
-
-string Ime;
-Console.WriteLine("Unesi ime: ");
-
-Ime = Console.ReadLine();
-
-Console.WriteLine(Ime);
+using UcenjeCS;
+E01UlazIzlaz.Izvedi();
