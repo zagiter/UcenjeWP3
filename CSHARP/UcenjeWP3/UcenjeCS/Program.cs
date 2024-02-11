@@ -7,7 +7,7 @@ using UcenjeCS;
 
 //E03UvjetnoGrananjeIf.Izvedi();
 
-E04UvjetnoGrananjeSwitch.Izvedi();
+//E04UvjetnoGrananjeSwitch.Izvedi();
 
 
 
