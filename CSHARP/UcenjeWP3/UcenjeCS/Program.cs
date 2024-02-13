@@ -9,8 +9,9 @@ using UcenjeCS;
 
 //E04UvjetnoGrananjeSwitch.Izvedi();
 
+//E05Nizovi.Izvedi();
 
-
+//E06ForPetlja.Izvedi();
 
 
 //Z01.Izvedi();
@@ -18,3 +19,5 @@ using UcenjeCS;
 //Z02.Izvedi();
 
 //Z03.Izvedi();
+
+Z04.Izvedi();
