@@ -13,6 +13,14 @@ using UcenjeCS;
 
 //E06ForPetlja.Izvedi();
 
+//E07WhilePetlja.Izvedi();
+
+//E08DoWhile.Izvedi();
+
+//E09ForEach.Izvedi();
+
+
+
 
 //Z01.Izvedi();
 
@@ -20,4 +28,6 @@ using UcenjeCS;
 
 //Z03.Izvedi();
 
-Z04.Izvedi();
+//Z04.Izvedi();
+
+//Z05.Izvedi();
