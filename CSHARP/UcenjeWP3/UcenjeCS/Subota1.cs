@@ -160,31 +160,8 @@ namespace UcenjeCS
             }
 
 
-            int rows = 5;
-            int cols = 5;
-            int number = 1;
-
-            int[,] table = new int[rows, cols];
-
-            // Popunjavamo tablicu brojevima od 1 do rows*cols
-            for (int i = rows + 1; i <= 0; i++)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    table[i, j] = number++;
-                }
-            }
-
-            // Ispisujemo tablicu
-            Console.WriteLine("Ciklični ispis brojeva od 1 dolje lijevo:");
-            for (int i = rows - 1; i >= 0; i--)
-            {
-                for (int j = 0; j < cols; j++)
-                {
-                    Console.Write("{0,3} ", table[i, j]);
-                }
-                Console.WriteLine();
-            }
+            
+            
         }
     }
 }
