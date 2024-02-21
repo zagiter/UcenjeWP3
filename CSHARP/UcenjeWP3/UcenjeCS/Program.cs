@@ -31,3 +31,6 @@ using UcenjeCS;
 //Z04.Izvedi();
 
 //Z05.Izvedi();
+
+
+Subota1.Izvedi();
