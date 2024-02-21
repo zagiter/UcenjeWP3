@@ -8,14 +8,14 @@ namespace UcenjeCS
 {
     internal class Subota1
     {
-        public static void Izvedi() 
+        public static void Izvedi()
         {
-            for (int k = 0; k < 5; k++) 
+            for (int k = 0; k < 5; k++)
             {
                 Console.WriteLine(DateTime.Now);
                 Thread.Sleep(1000); // usporavanje rada programa
             }
-            
+
             int t = 2147483647;
 
             long l = t + 1; // implicitno
@@ -32,7 +32,7 @@ namespace UcenjeCS
             // Program unosi tri cijela broja i ispisuje ih jedan pored drugoga
 
             Console.WriteLine("Unesi prvi broj: ");
-            int a = int.Parse(Console.ReadLine()); 
+            int a = int.Parse(Console.ReadLine());
             Console.WriteLine("Unesi drugi broj: ");
             int b = int.Parse(Console.ReadLine());
             Console.WriteLine("Unesi treći broj: ");
@@ -47,11 +47,11 @@ namespace UcenjeCS
             // Ako svako ime grada počinje slovo o
             // ispisuje SUPER
             // inače ispisuje OK
-            
-            
+
+
             // Rješenje 1
-            
-            
+
+
             //Console.Write("Unesi 1. grad: ");
             //string g1 = Console.ReadLine();
 
@@ -111,8 +111,8 @@ namespace UcenjeCS
 
 
             // Kreirajte KN/EUR konverzija kalkulator
-            
-            
+
+
             int vrsta;
 
             while (true)
@@ -159,6 +159,32 @@ namespace UcenjeCS
                 Console.ResetColor();
             }
 
+
+            int rows = 5;
+            int cols = 5;
+            int number = 1;
+
+            int[,] table = new int[rows, cols];
+
+            // Popunjavamo tablicu brojevima od 1 do rows*cols
+            for (int i = rows + 1; i <= 0; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    table[i, j] = number++;
+                }
+            }
+
+            // Ispisujemo tablicu
+            Console.WriteLine("Ciklični ispis brojeva od 1 dolje lijevo:");
+            for (int i = rows - 1; i >= 0; i--)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write("{0,3} ", table[i, j]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
