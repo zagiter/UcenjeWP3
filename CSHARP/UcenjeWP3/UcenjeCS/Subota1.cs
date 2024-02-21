@@ -151,7 +151,7 @@ namespace UcenjeCS
 
             //int i = int.Parse(Console.ReadLine());
 
-            // Napravite program koji u konzolu ispisuje "Edunova" crvenim slovima
+            // Napravite program koji u konzolu ispisuje "Edunova" ZELENIM slovima
 
             {
                 Console.ForegroundColor = ConsoleColor.Green;
