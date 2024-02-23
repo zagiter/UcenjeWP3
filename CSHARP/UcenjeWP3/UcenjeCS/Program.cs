@@ -20,8 +20,9 @@ using UcenjeCS;
 //E09ForEach.Izvedi();
 
 // Kada se METODA poziva na KLASI (što je ovdje slučaj), ona je static
-E10Metode.Izvedi();
+//E10Metode.Izvedi();
 
+//Pomocno.Izvedi();
 
 
 
@@ -34,6 +35,10 @@ E10Metode.Izvedi();
 //Z04.Izvedi();
 
 //Z05.Izvedi();
+
+Z06.Izvedi();
+
+//Z07.Izvedi();
 
 
 //Subota1.Izvedi();
