@@ -36,9 +36,9 @@ using UcenjeCS;
 
 //Z05.Izvedi();
 
-Z06.Izvedi();
+//Z06.Izvedi();
 
-//Z07.Izvedi();
+Z07.Izvedi();
 
 
 //Subota1.Izvedi();

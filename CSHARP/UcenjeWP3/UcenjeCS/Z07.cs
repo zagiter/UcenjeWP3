@@ -22,7 +22,7 @@ namespace UcenjeCS
             char slovo = 'a';
 
             
-            {
+            
                 if ((visina > 170) && (visina < 190) && (tezina < 90.5))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -37,8 +37,6 @@ namespace UcenjeCS
 
                     Console.ResetColor();
                 }
-
-            }
 
         }
 
