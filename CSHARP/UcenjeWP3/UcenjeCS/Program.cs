@@ -22,6 +22,11 @@ using UcenjeCS;
 // Kada se METODA poziva na KLASI (što je ovdje slučaj), ona je static
 //E10Metode.Izvedi();
 
+//E11Rekurzija.Izvedi();
+
+UcenjeCS.E12KlasaObjekt.Program.Izvedi();
+
+
 //Pomocno.Izvedi();
 
 
@@ -38,7 +43,7 @@ using UcenjeCS;
 
 //Z06.Izvedi();
 
-Z07.Izvedi();
+//Z07.Izvedi();
 
 
 //Subota1.Izvedi();
