@@ -24,7 +24,13 @@ using UcenjeCS;
 
 //E11Rekurzija.Izvedi();
 
-UcenjeCS.E12KlasaObjekt.Program.Izvedi();
+//UcenjeCS.E12KlasaObjekt.Program.Izvedi();
+
+new UcenjeCS.E13Nasljedjivanje.Program();  // Pozivanje Program-a u E13.....
+
+
+
+
 
 
 //Pomocno.Izvedi();
