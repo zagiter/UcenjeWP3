@@ -12,9 +12,13 @@ namespace UcenjeCS.E12KlasaObjekt
         // klasa sadrži svojstva
 
         public string? Ime { get; set; } // OOP princip: učahurivanje
-        public string? Prezime { get; set; } 
+        public string? Prezime { get; set; }
+
+        public Mjesto Mjesto { get; set; }
+
 
         // klasa sadrži metode
+
         public string ImePrezime()  // ova metoda se može pozvati na objektu, ne na klasi
         {
             return Ime + " " + Prezime;
