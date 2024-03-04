@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace UcenjeCS.E13Nasljedjivanje
 {
-    internal class OsobaImpl
+    internal class OsobaImpl:Osoba
     {
+
     }
 }

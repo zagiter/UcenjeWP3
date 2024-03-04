@@ -11,5 +11,10 @@ namespace UcenjeCS.E13Nasljedjivanje
 
         public string? BrojUgovora { get; set; }
 
+        public override string ToString()
+        {
+            return base.ToString() + ": " + BrojUgovora;
+        }
+
     }
 }

@@ -26,7 +26,8 @@ using UcenjeCS;
 
 //UcenjeCS.E12KlasaObjekt.Program.Izvedi();
 
-new UcenjeCS.E13Nasljedjivanje.Program();  // Pozivanje Program-a u E13.....
+    // kada vidimo ključnu riječ new poziva se konstruktor
+new UcenjeCS.E13Nasljedjivanje.Program();  // Pozivanje konstruktora Program-a u E13.....
 
 
 

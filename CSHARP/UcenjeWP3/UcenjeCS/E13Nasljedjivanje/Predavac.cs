@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 namespace UcenjeCS.E13Nasljedjivanje
 {
     // Jedna klasa može naslijediiti samo jednu nadklasu
-    internal class Predavac:Osoba  // Klsa Predavac nasljeđuje klasu osoba
+    internal class Predavac:Osoba  // Klasa Predavac nasljeđuje klasu osoba
     {
 
-        public string? Iban { get; set; }
+        public string? Iban { get; set;}
 
+        public override string ToString()
+        {
+            return Ime + " " + Prezime + ": " + Iban;
+        }
     }
 }
