@@ -33,6 +33,10 @@ namespace UcenjeCS.E13Nasljedjivanje
             Primjer4();
 
             Primjer5();
+
+            Primjer6();
+
+            Primjer7();
         }
 
         private void Primjer1()
@@ -115,10 +119,33 @@ namespace UcenjeCS.E13Nasljedjivanje
             Console.WriteLine(sb);  // poziva se metoda ToString
 
 
+        }
+
+        private void Primjer6()
+        {
+            // Baza b = new Baza();  // ne mogu instancirati klasu ako ne pošaljem traženi parametar
+
+            Baza b = new Baza("edunovawp3");
 
 
         }
-    
-    
+
+
+        private void Primjer7()
+        {
+            Polaznik[] polaznici = new Polaznik[3];
+
+            polaznici[0] = new Polaznik("Josip", "Josić", "1/24");
+            polaznici[1] = new Polaznik("Mirko", "Mirkić", "2/24");
+            polaznici[2] = new Polaznik();
+
+            // s niza polaznici ispisati Josić
+            Console.WriteLine(polaznici[0].Prezime);
+
+        }
+
+
+
+
     }
 }

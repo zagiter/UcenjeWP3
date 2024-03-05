@@ -13,7 +13,8 @@ namespace UcenjeCS.E13Nasljedjivanje
     {
         // prazan (empty) konstruktor
         public Osoba() { }
-        
+
+        // puni (full) konstruktor
         public Osoba(string ime, string prezime) 
         { 
             this.Ime = ime;

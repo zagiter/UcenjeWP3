@@ -8,6 +8,16 @@ namespace UcenjeCS.E13Nasljedjivanje
 {
     internal class Polaznik:Osoba
     {
+        public Polaznik():base() // :base() označava poziv praznog kkonstuktora u Osobi 
+        { 
+        }
+
+        public Polaznik(string ime, string prezime, string brojugovora)
+            :base(ime, prezime)
+        { 
+            this.BrojUgovora = brojugovora;
+        
+        }
 
         public string? BrojUgovora { get; set; }
 
