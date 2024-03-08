@@ -56,21 +56,27 @@ namespace UcenjeCS.E14VjezbanjeRadaSObjektima
 
         private void OdaberiOpciju()
         {
-            switch (Pomocno.UcitajCijeliBroj("Odaberi opciju: ")) 
+            switch (Pomocno.UcitajCijeliBroj("Odaberi opciju")) 
             {
                 case 1:
-                    PrikaziOsobe();
-                    Izbornik();
+                    PrikaziOsobe(true);
                     break;
                 
                 case 2:
                     UnosNoveOsobe();
-                    Izbornik();
+                    break;
+
+                case 3:
+                    PromjenaOsobe();
+                    break;
+                
+                case 4:
+                    BrisanjeOsobe();
                     break;
 
                 case 5:
                     Console.WriteLine("Doviđorno!");
-                    break;
+                    return;
                 
                 default:
                     Console.WriteLine("Nije dobroooo :-))");
@@ -78,6 +84,44 @@ namespace UcenjeCS.E14VjezbanjeRadaSObjektima
                     break;
 
             }
+            Izbornik();
+        }
+
+        private void BrisanjeOsobe()
+        {
+            if (Osobe.Count == 0)
+            {
+                Console.WriteLine("Nema osoba za brisanje");
+                Console.WriteLine("**********************");
+                return;
+            }
+            
+            Console.WriteLine("** Brisanje osobe ***");
+            PrikaziOsobe();
+            int izbor = Pomocno.UcitajCijeliBroj("Izaberi broj osobe",1,Osobe.Count);
+            Osobe.RemoveAt(izbor - 1);
+        }
+
+        private void PromjenaOsobe()
+        {
+            if (Osobe.Count == 0) 
+            {
+                Console.WriteLine("Nema osoba za promjenu");
+                Console.WriteLine("**********************");
+                return;
+            }
+            
+            PrikaziOsobe();
+            int izbor = Pomocno.UcitajCijeliBroj("Izaberi broj osobe (0 = ODUSTANI)",0,Osobe.Count);
+            if (izbor == 0) 
+            {
+                return;
+            
+            }
+            var o = Osobe[izbor - 1];
+            o.Ime = Pomocno.UcitajString("Ime [" + o.Ime + "]");
+            o.Prezime = Pomocno.UcitajString("Prezime [" + o.Prezime + "]");
+            o.Dob = Pomocno.UcitajCijeliBroj("Dob [" + o.Dob + "]");
         }
 
         private void UnosNoveOsobe()
@@ -91,14 +135,27 @@ namespace UcenjeCS.E14VjezbanjeRadaSObjektima
             
         }
 
-        private void PrikaziOsobe()
+        private void PrikaziOsobe(bool PrikaziNaslov=false)
         {
-            Console.WriteLine("*********************");
-            Console.WriteLine("** Osobe u sustavu **");
-            Console.WriteLine("*********************");
+            if (PrikaziNaslov)
+            {
+                Console.WriteLine("*********************");
+                Console.WriteLine("** Osobe u sustavu **");
+                Console.WriteLine("*********************");
+            }
+
+            if (Osobe.Count == 0) 
+            {
+                Console.WriteLine("Nema nijedne osobe u sustavu");
+                Console.WriteLine("****************************");
+                return;
+            }
+            
+            
+            int i = 1;
             foreach (var o in Osobe)
             {
-                Console.WriteLine(o);
+                Console.WriteLine(i++ + ". " + o);
             }
             Console.WriteLine("*********************");
         }
