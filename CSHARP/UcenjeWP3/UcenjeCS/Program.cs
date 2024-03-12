@@ -35,7 +35,9 @@ using UcenjeCS;
 
 //new UcenjeCS.E15Polimorfizam.Program();
 
-new UcenjeCS.E16Vjezbanje.Program();
+//new UcenjeCS.E16Vjezbanje.Program();
+
+new UcenjeCS.E17KonzolnaAplikacija.Izbornik();
 
 
 
