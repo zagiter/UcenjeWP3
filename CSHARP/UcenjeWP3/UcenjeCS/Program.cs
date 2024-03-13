@@ -43,7 +43,9 @@ using UcenjeCS;
 
 //new UcenjeCS.E19Delegati.Program();
 
-new UcenjeCS.E20Ekstenzije.Program();
+//new UcenjeCS.E20Ekstenzije.Program();
+
+CiklicnaMatrica.Izvedi();
 
 
 
