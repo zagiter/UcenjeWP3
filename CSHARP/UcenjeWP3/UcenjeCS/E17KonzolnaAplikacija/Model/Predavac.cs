@@ -16,12 +16,12 @@ namespace UcenjeCS.E17KonzolnaAplikacija.Model
         public string? Email { get; set; }
         public string? Oib { get; set; }
         public string? BrojUgovora { get; set; }
-        public string Iban { get; internal set; }
+        public string? Iban { get; internal set; }
 
 
         public override string ToString()
         {
-            return Ime + " " + Prezime + ", " + Email + "," + Iban;
+            return Ime + " " + Prezime + ", " + Email + ", " + Iban;
         }
     }
 }

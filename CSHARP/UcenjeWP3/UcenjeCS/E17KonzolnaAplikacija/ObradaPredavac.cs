@@ -114,9 +114,9 @@ namespace UcenjeCS.E17KonzolnaAplikacija
                 Sifra = 1,
                 Ime = "Tomislav",
                 Prezime = "Jakopec",
-                Email = "tjakopec@nekimail.com",
-                Oib = "33736472822",
-                Iban = "12343344"
+                Email = "tjakopec@mailjedan.com",
+                Oib = "123123123123",
+                Iban = "HR0020202020202020"
             });
 
             Predavaci.Add(new Predavac
@@ -124,9 +124,9 @@ namespace UcenjeCS.E17KonzolnaAplikacija
                 Sifra = 2,
                 Ime = "Eduard",
                 Prezime = "Kuzma",
-                Email = "edo@gmail.com",
-                Oib = "33736472821",
-                Iban = "654654654"
+                Email = "edo@maildrugi.com",
+                Oib = "123123123123",
+                Iban = "HR0030303030303030"
             });
         }
 
