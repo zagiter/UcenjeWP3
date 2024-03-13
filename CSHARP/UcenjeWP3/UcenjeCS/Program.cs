@@ -37,7 +37,13 @@ using UcenjeCS;
 
 //new UcenjeCS.E16Vjezbanje.Program();
 
-new UcenjeCS.E17KonzolnaAplikacija.Izbornik();
+//new UcenjeCS.E17KonzolnaAplikacija.Izbornik();
+
+//new UcenjeCS.E18Lambda.Program();
+
+//new UcenjeCS.E19Delegati.Program();
+
+new UcenjeCS.E20Ekstenzije.Program();
 
 
 
