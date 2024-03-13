@@ -6,5 +6,7 @@
         public Smjer Smjer { get; set; }
         public DateTime DatumPocetka { get; set; }
         public List<Polaznik> Polaznici { get; set; }
+        public List<Predavac> Predavaci { get; set; }
     }
+
 }

@@ -28,6 +28,8 @@ namespace UcenjeCS.E17KonzolnaAplikacija
             Console.WriteLine("4. Brisanje polaznika");
             Console.WriteLine("5. Povratak na glavni izbornik");
             Console.WriteLine("------------------------------");
+            Console.WriteLine("\t");
+
             switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika polaznika: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
@@ -82,22 +84,23 @@ namespace UcenjeCS.E17KonzolnaAplikacija
 
         public void PregledPolaznika()
         {
-            Console.WriteLine("------------------");
+            Console.WriteLine("-------------------");
             Console.WriteLine("---- Polaznici ----");
-            Console.WriteLine("------------------");
+            Console.WriteLine("-------------------");
             int b = 1;
             foreach (Polaznik polaznik in Polaznici)
             {
                 Console.WriteLine("{0}. {1}", b++, polaznik);
             }
-            Console.WriteLine("------------------");
+            Console.WriteLine("-------------------");
+            Console.WriteLine("\t");
         }
 
         private void UcitajPolaznika()
         {
             var p = new Polaznik();
-            //p.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra polaznika: ",
-                //"Unos mora biti pozitivni cijeli broj");
+            p.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra polaznika: ",
+                "Unos mora biti pozitivni cijeli broj");
             p.Ime = Pomocno.UcitajString("Unesi ime polaznika: ", "Ime obavezno");
             p.Prezime = Pomocno.UcitajString("Unesi prezime polaznika: ", "Prezime obavezno");
             p.Email = Pomocno.UcitajString("Unesi Email polaznika: ", "Email obavezno");

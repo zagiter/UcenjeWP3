@@ -28,6 +28,8 @@ namespace UcenjeCS.E17KonzolnaAplikacija
             Console.WriteLine("4. Brisanje smjera");
             Console.WriteLine("5. Povratak na glavni izbornik");
             Console.WriteLine("------------------------------");
+            Console.WriteLine("\t");
+
             switch (Pomocno.ucitajBrojRaspon("Odaberite stavku izbornika smjera: ",
                 "Odabir mora biti 1-5", 1, 5))
             {
@@ -83,8 +85,8 @@ namespace UcenjeCS.E17KonzolnaAplikacija
         private void UnosNovogSmjera()
         {
             var s = new Smjer();
-            //s.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra smjera: ",
-            //    "Unos mora biti pozitivni cijeli broj");
+            s.Sifra = Pomocno.ucitajCijeliBroj("Unesite šifra smjera: ",
+               "Unos mora biti pozitivni cijeli broj");
             s.Naziv = Pomocno.UcitajString("Unesite naziv smjera: ",
                 "Unos obavezan");
             s.Trajanje = Pomocno.ucitajCijeliBroj("Unesite trajanje smjera u satima: ",
