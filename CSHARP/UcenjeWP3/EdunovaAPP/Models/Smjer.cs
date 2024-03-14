@@ -10,7 +10,7 @@ namespace EdunovaAPP.Models
         public decimal? Cijena { get; set; }
 
 
-        [Column("vaucer")]  // ovo se nužno ne mora
+        [Column("vaucer")]  // ovo se nužno ne mora u našoj APP
         public bool? Verificiran { get; set; }
     }
 }
