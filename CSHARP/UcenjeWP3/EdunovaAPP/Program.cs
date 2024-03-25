@@ -10,6 +10,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// svi se od svuda na sve naèine mogu spojiti na naš API
+// Èitaj https://code-maze.com/aspnetcore-webapi-best-practices/
+builder.Services.AddCors(opcije =>
+{
+    opcije.AddPolicy("CorsPolicy",
+        builder =>
+        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+});
+
 
 // Dodavanje baze podataka
 builder.Services.AddDbContext<EdunovaContext>(o => {
@@ -32,5 +42,15 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CorsPolicy");
+
+// za potrebe produkcije
+
+app.UseStaticFiles();
+app.UseDefaultFiles();
+app.MapFallbackToFile("index.html");
+
+// završena potreba produkcije
 
 app.Run();
