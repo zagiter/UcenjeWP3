@@ -1,9 +1,8 @@
 export const RoutesNames = {
-    HONE : '/',
+    HOME: '/',
 
     SMJER_PREGLED: '/smjerovi',
     SMJER_NOVI: '/smjerovi/dodaj',
-    SMJER_PROMIJENI: '/smjerovi/:sifra'
-
-
+    SMJER_PROMJENI: '/smjerovi/:sifra'
+    
 };
